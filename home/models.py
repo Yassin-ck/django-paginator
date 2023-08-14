@@ -8,6 +8,9 @@ class Books(models.Model):
     author = models.CharField(max_length=100)
     publication_year = models.PositiveIntegerField()
     
+    class Meta:
+        verbose_name_plural = 'Books'
+    
     def __str__(self):
         return self.title
     

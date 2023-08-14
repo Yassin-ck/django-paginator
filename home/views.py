@@ -11,9 +11,6 @@ def Index(request):
     paginator = Paginator(all_bokks,3)
     page_number = request.GET.get('page')
     page = paginator.get_page(page_number)
-    print(page)
-    print(page.object_list)
-    print(page.paginator.num_pages)
     context = {
         'page':page
     }
